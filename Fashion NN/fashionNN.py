@@ -6,7 +6,7 @@ from tensorflow import keras
 class myCallback(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs={}):
       if(logs.get('accuracy')>0.98):
-        print("\nReached 60% accuracy so cancelling training!")
+        print("\nReached 98% accuracy so cancelling training!")
         self.model.stop_training = True
         
 # Instance of Callback
